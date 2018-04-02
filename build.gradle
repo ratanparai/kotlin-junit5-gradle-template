@@ -1,6 +1,7 @@
 buildscript {
 	ext {
 		kotlinVersion = '1.2.30'
+        junitJupitarVersion = '5.1.0'
 	}
 	repositories {
 		mavenCentral()
@@ -33,7 +34,12 @@ repositories {
 	mavenCentral()
 }
 
+test{
+    useJUnitPlatform()
+}
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitJupitarVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitJupitarVersion"
 }
