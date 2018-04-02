@@ -47,6 +47,13 @@ test{
     }
 }
 
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled true
+    }
+}
+
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
     testImplementation "org.junit.jupiter:junit-jupiter-api:$junitJupitarVersion"
